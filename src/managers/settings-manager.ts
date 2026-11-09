@@ -123,5 +123,14 @@ export class SettingsManager {
         if (oldAttachmentFolder && !loadedData.attachmentFolderPath) {
             mergedSettings.attachmentFolderPath = oldAttachmentFolder;
         }
+
+        // Up to 1.9.1 the default related template, [{{links}}], wrote a nested list
+        mergedSettings.customFrontmatterFields = mergedSettings.customFrontmatterFields.map(field => {
+            if (isRecord(field) && field.name === 'related' && field.template === '[{{links}}]') {
+                return { ...field, template: '{{links|json}}' };
+            }
+
+            return field;
+        });
     }
 }
