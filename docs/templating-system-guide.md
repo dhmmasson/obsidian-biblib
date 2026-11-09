@@ -36,7 +36,7 @@ The **citekey** is available as `{{citekey}}`. **Date parts** are available as `
 
 **Abbreviation**: `|abbrN` takes the first N characters — `|abbr3` applied to "Smith" gives "Smi".
 
-**Special**: `|titleword` extracts the first significant word from a title (skipping articles like "the", "a", "an"). `|shorttitle` extracts the first three significant words.
+**Special**: `|json` converts arrays and objects to JSON; use `{{links|json}}` for a custom `related` field. `|titleword` extracts the first significant word from a title (skipping articles like "the", "a", "an"). `|shorttitle` extracts the first three significant words.
 
 ## Examples
 

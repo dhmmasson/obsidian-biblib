@@ -42,6 +42,8 @@ See the [Templating](templating-system-guide.md) page for the full syntax refere
 
 Additional fields to include in the YAML frontmatter of new literature notes. Each field has a name and a template for its value. For example, a field named `year` with the template `{{year}}` extracts the publication year into a top-level frontmatter field.
 
+The default `related` field uses `{{links|json}}`, which writes the related notes as a list of links.
+
 !!! warning
     Do not define templates for fields that are part of the CSL-JSON standard (like `title`, `author`, or `issued`). Doing so may produce invalid bibliography files.
 

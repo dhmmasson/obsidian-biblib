@@ -23,4 +23,7 @@ Example:
 
 -->
 
-No unreleased changes yet.
+## Fixed
+
+- (#53) Fixed the default `related` property being written as a nested list (`[[]]` with no related notes)
+  - New notes get a flat list of links; settings still using the old default template are updated automatically
